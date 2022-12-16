@@ -3,21 +3,6 @@ import array as arr # Arrays
 import random
 import time
 
-
-def random_players(p1,p2):
-
-    number = random.randint(0,1)
-    
-    if number == 0:
-        players = (p1, p2)
-    else:
-        players = (p2, p1)
-
-    players[0].caracter = 'O'
-    players[1].caracter = 'X'
-
-    return players
-
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -167,6 +152,20 @@ class Board(bcolors):
             # Space
             print('')
 
+def random_players(p1,p2):
+
+    number = random.randint(0,1)
+    
+    if number == 0:
+        players = (p1, p2)
+    else:
+        players = (p2, p1)
+
+    players[0].caracter = 'O'
+    players[1].caracter = 'X'
+
+    return players
+
 
 
 def get_players_name():
@@ -214,7 +213,7 @@ if __name__ == '__main__':
     board = Board()
 
     # Start of play
-    welcome_game("You're READY??????")
+    welcome_game("Yourue:'re READY??????")
     while True:
 
         for i in range(0,2):
